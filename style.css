@@ -1,0 +1,78 @@
+/* Basic CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Defaults (Day Mode) */
+body {
+  font-family: sans-serif;
+  background-color: white;
+  color: black;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Night Mode Styles */
+body.night-mode {
+  background-color: black;
+  color: white;
+}
+
+/* Toggle Button */
+.night-mode-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 9999;
+}
+
+/* Logo Container */
+.logo-container {
+  text-align: center;
+  margin-top: 60px; /* Space for toggle icon */
+  margin-bottom: 40px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  transition: filter 0.5s;
+}
+
+/* Invert logo in night mode */
+body.night-mode .logo {
+  filter: invert(1);
+}
+
+/* Daily Reading Section */
+.daily-reading {
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Book Section */
+.book-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.book-image {
+  width: 200px;
+  transition: filter 0.5s;
+}
+
+/* Invert book image in night mode */
+body.night-mode .book-image {
+  filter: invert(1);
+}
+
+/* Link styling */
+a {
+  color: inherit;
+  text-decoration: underline;
+}

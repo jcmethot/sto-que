@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Book Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Night Mode Toggle Icon -->
+  <div class="night-mode-toggle" onclick="toggleNightMode()">
+    <!-- You can use an emoji or an image for this icon -->
+    <span id="toggle-icon">&#9788;</span>
+  </div>
+
+  <!-- Logo Section -->
+  <div class="logo-container">
+    <img src="logo.svg" alt="Logo" class="logo" />
+  </div>
+
+  <!-- Daily Reading Section -->
+  <div class="daily-reading">
+    <h2>Today's Reading</h2>
+    <p>
+      This is where you put your daily reading excerpt from your book.<br>
+      You can replace this text with your own content.
+    </p>
+  </div>
+
+  <!-- Book Image and Purchase Link -->
+  <div class="book-section">
+    <a href="https://www.lulu.com/" target="_blank">
+      <img src="book.jpg" alt="My Book" class="book-image" />
+    </a>
+    <p>
+      <a href="https://www.lulu.com/" target="_blank">
+        Click here to purchase my book on Lulu.com
+      </a>
+    </p>
+  </div>
+
+  <!-- JavaScript to handle night mode toggle -->
+  <script src="script.js"></script>
+</body>
+</html>
