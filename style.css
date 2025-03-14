@@ -5,22 +5,19 @@
   box-sizing: border-box;
 }
 
-/* Body Defaults (Day Mode) */
 body {
-  font-family: sans-serif;
-  background-color: white;
-  color: black;
-  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
   padding: 20px;
+  transition: background-color 0.5s, color 0.5s;
 }
 
-/* Night Mode Styles */
 body.night-mode {
-  background-color: black;
-  color: white;
+  background-color: #121212;
+  color: #f0f0f0;
 }
 
-/* Toggle Button */
 .night-mode-toggle {
   position: fixed;
   top: 20px;
@@ -28,51 +25,81 @@ body.night-mode {
   cursor: pointer;
   font-size: 24px;
   z-index: 9999;
+  user-select: none;
 }
 
-/* Logo Container */
 .logo-container {
   text-align: center;
-  margin-top: 60px; /* Space for toggle icon */
+  margin-top: 60px;
   margin-bottom: 40px;
 }
 
 .logo {
-  width: 150px;
-  height: auto;
-  transition: filter 0.5s;
+  width: 120px;
+  transition: transform 0.3s;
 }
 
-/* Invert logo in night mode */
+.logo:hover {
+  transform: scale(1.1);
+}
+
 body.night-mode .logo {
   filter: invert(1);
 }
 
-/* Daily Reading Section */
-.daily-reading {
-  margin: 20px auto;
-  max-width: 600px;
-  text-align: center;
+.card-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-/* Book Section */
-.book-section {
-  text-align: center;
-  margin-top: 40px;
+.card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+body.night-mode .card {
+  background-color: #1e1e1e;
+}
+
+.card:hover {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transform: scale(1.03);
 }
 
 .book-image {
-  width: 200px;
-  transition: filter 0.5s;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: transform 0.3s;
 }
 
-/* Invert book image in night mode */
-body.night-mode .book-image {
-  filter: invert(1);
+.book-image:hover {
+  transform: scale(1.05);
 }
 
-/* Link styling */
+.purchase-link {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
 a {
   color: inherit;
-  text-decoration: underline;
+  text-decoration: none;
+}
+
+@media (min-width: 600px) {
+  .card-container {
+    flex-direction: row;
+  }
+
+  .card {
+    flex: 1;
+  }
 }
